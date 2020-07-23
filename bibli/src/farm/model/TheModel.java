@@ -1,11 +1,12 @@
 /**
  * Class The Model
  * 
- * Purpose:
+ * Its use:
  * 
- * Responsible for creating the instances of the setUp and search classes 
+ * It's used for creating the instances for setup and maybe search 
  * 
- * In this class we have methods for serialization and deserialization which will be the methods responsible for storing the data and getting it back  
+ * In this class will be a serialisation method for a '.ser' file that will store the data 
+ * for the animals
  * 
  */
 package farm.model;
