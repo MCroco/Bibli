@@ -8,7 +8,8 @@
  * In this class will be a serialisation method for a '.ser' file that will store the data 
  * for the animals
  * 
- */
+ * 
+*/
 package farm.model;
 
 
