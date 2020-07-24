@@ -7,25 +7,25 @@ import java.util.ArrayList;
 public abstract class Animal implements Serializable {
     
     private static int id;
-    private final  int exhibitionNumb;
+    private final  int idAnimal;
     private String specie;
     private String name;
     private String dateOfBirth;
     private String dateOfArrival;
     private String gender;
     private Medication medication;
-    private Vacine vacine;
+    private Vaccine vacine;
     private ArrayList<Animal> offsprings;
     
    
     public Animal() {
-        exhibitionNumb = id; 
+        idAnimal = id; 
         id++;
         
     }
     
-    public Animal(String specie, String name, String dateOfBirth, String dateOfArrival, int gender, Medication medication, Vacine vacine) {
-        exhibitionNumb = id; 
+    public Animal(String specie, String name, String dateOfBirth, String dateOfArrival, int gender, Medication medication, Vaccine vacine) {
+        idAnimal = id; 
         id++; 
         this.specie = specie; 
         this.name = name; 
@@ -41,8 +41,8 @@ public abstract class Animal implements Serializable {
         this.offsprings = new ArrayList<Animal>();
     }
 
-    public int getExhibitionNumb() {
-        return exhibitionNumb;
+    public int getidAnimal() {
+        return idAnimal;
     }
 
     public String getDateOfBirth() {
@@ -61,7 +61,7 @@ public abstract class Animal implements Serializable {
         return medication;
     }
 
-    public Vacine getVacine() {
+    public Vaccine getVacine() {
         return vacine;
     }
 
@@ -79,7 +79,7 @@ public abstract class Animal implements Serializable {
     
     
     
-    public abstract void createOffpring(String name, String dateOfBirth, String dateOfArrival, int gender, Medication medication, Vacine vacine);
+    public abstract void createOffpring(String name, String dateOfBirth, String dateOfArrival, int gender, Medication medication, Vaccine vacine);
 
     
     public String toStringOffsprings(){
@@ -87,9 +87,9 @@ public abstract class Animal implements Serializable {
         if (getOffsprings().size() != 0){
             for (int i = 0 ; i < getOffsprings().size() ; i++){
                 if (i == getOffsprings().size() - 1){
-                    offpring += String.valueOf(getOffsprings().get(i).getExhibitionNumb());
+                    offpring += String.valueOf(getOffsprings().get(i).getidAnimal());
                 }else{
-                    offpring += String.valueOf(getOffsprings().get(i).getExhibitionNumb())+", ";
+                    offpring += String.valueOf(getOffsprings().get(i).getidAnimal())+", ";
                 }
             }
             offpring = "Animal: "+offpring+"";
@@ -100,7 +100,7 @@ public abstract class Animal implements Serializable {
 
     public ArrayList<String> toArrayList(){
         ArrayList<String> list = new ArrayList<String>();
-        list.add(String.valueOf(getExhibitionNumb()));
+        list.add(String.valueOf(getidAnimal()));
         list.add(getSpecie());
         list.add(getName());
         list.add(getDateOfBirth());
@@ -114,7 +114,7 @@ public abstract class Animal implements Serializable {
     
     public ArrayList<String> nameVariables(){
         ArrayList<String> names = new ArrayList<String>();
-        names.add("exhibitionNumb");
+        names.add("idAnimal");
         names.add("specie");
         names.add("name");
         names.add("dateOfBirth");
@@ -126,7 +126,8 @@ public abstract class Animal implements Serializable {
         return names;
     }
     
-    public  void setStaticVariable(int i) {
+    @SuppressWarnings("static-access")
+	public  void setStaticVariable(int i) {
         this.id = i; 
     }
     
