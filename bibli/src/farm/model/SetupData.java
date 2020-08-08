@@ -65,7 +65,7 @@ public class SetupData implements Serializable {
         }
     }
     
-    public void setListAnimals (int numAnimals) {
+    public void setListMain (int numAnimals) {
         try {
             
             Random r = new Random();
