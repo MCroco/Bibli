@@ -79,7 +79,39 @@ public class TheModel  {
         }
 
     }
-    
+    public void serialization() {
+        
+        FileOutputStream fileOut = null;
+    try {
+        // we will need:
+        // 1) FileOutputStream
+        fileOut = new FileOutputStream(file);
+
+        // 2) ObjectOutputStream - and pass on the FileOutputStream
+        ObjectOutputStream out = new ObjectOutputStream(fileOut);
+
+        // now we will need to write the object 
+        out.writeObject(listAnimals);
+        out.flush();
+        // Close file
+        out.close();
+
+        
+    } catch (FileNotFoundException ex) {
+        Logger.getLogger(TheModel.class.getName()).log(Level.SEVERE, null, ex);
+    } catch (IOException ex) {
+        Logger.getLogger(TheModel.class.getName()).log(Level.SEVERE, null, ex);
+    } finally {
+        try {
+            fileOut.close();
+        } catch (IOException ex) {
+            Logger.getLogger(TheModel.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+        
+        
+}
+
     
     
 }
