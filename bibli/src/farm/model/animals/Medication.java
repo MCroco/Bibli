@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package farm.model.animals;
 
 import java.io.Serializable;
@@ -5,11 +10,11 @@ import java.util.ArrayList;
 
 /**
  *
- * @author MConstatnin
+ * @author MConstantin
  */
 public class Medication implements Serializable {
     private int id;
-    private final int serial;
+    private final int serial; 
     private ArrayList<String> medicationName;
     
     public Medication() {
@@ -52,8 +57,4 @@ public class Medication implements Serializable {
         }
         return var;
     }
-
-	public int getSerial() {
-		return serial;
-	}
 }

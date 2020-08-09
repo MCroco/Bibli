@@ -1,20 +1,19 @@
-
 package farm.model.animals;
 
 import java.util.ArrayList;
 
 /**
  *
- * @author MConstantin
+ * @author M. Constantin
  */
 public interface Avian {
 
-    default String canFly(int t) {
-        return t == 1 ? "Yes" : "No"; 
+    default String peutVoler(int t) {
+        return t == 1 ? "Oui" : "Non"; 
     }
     
-    default String hasFeeders(int t) {
-        return t == 1 ? "Yes" : "No"; 
+    default String aPlumes(int t) {
+        return t == 1 ? "Oui" : "Non"; 
     }
     
     public ArrayList<String> toArrayList();
