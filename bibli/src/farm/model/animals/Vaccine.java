@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author MConstantin
+ * @author M. Constantin
  */
 public class Vaccine implements Serializable {
     private int id;
@@ -25,7 +25,7 @@ public class Vaccine implements Serializable {
         vaccineName.add(name); 
     }
     
-    public void addVaccine(String name) {
+    public void addVacine(String name) {
         vaccineName.add(name); 
     }
 
@@ -52,10 +52,6 @@ public class Vaccine implements Serializable {
             this.vaccineName.add(v);
         }
     }
-
-	public int getSerial() {
-		return serial;
-	}
 } 
        
 
