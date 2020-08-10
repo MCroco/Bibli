@@ -23,6 +23,7 @@ public class CreateAquatic extends Animal implements Aquatic {
     public int getCanBeOutSideWatter() {
         return canBeOutSideWatter;
     }
+//    
     
     @Override
     public ArrayList<String> toArrayList(){
