@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Familia Bracho
+ * @author MConstantin
  */
 public interface Insect {
 
