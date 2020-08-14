@@ -37,7 +37,7 @@ public abstract class Animal implements Serializable {
         if (gender == 1) {
             this.gender = "Male";
         } else {
-            this.gender = "Female";
+            this.gender = "Femelle";
         }
         this.offsprings = new ArrayList<Animal>();
     }
@@ -129,5 +129,9 @@ public abstract class Animal implements Serializable {
     public  void setStaticVariable(int i) {
         this.id = i; 
     }
+    
+    
+    
+
     
 }

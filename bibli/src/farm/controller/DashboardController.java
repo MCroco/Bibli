@@ -14,7 +14,9 @@ import farm.view.animals.AddAnimalFrame;
 import farm.view.animals.ViewAnimalsFrame;
 
 /**
- *
+ * Cette classe est utilisée afin de travailler avec la fenêtre principale;
+ * Cette fenêtre dit ce qui va se passer lorsque un des 2 boutons sont appuyés 
+ * ou bien lorsque l'utilisateur veut fermer l'application 
  * @author MConstantin
  */
 public class DashboardController implements WindowListener {
@@ -60,25 +62,6 @@ public class DashboardController implements WindowListener {
         });
     }
     
-    private void viewAnimalsButtonController() {
-
-        adminDash.getViewAnimalButton().addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                viewAnimals = new ViewAnimalsFrame(adminDash.getView().getAnimals(), "Voir animaux", 975, 600, "src/farm/view/images/animal.png");
-                
-                ctrl.getViewAnimalsCtrl().setViewAnimals(viewAnimals);
-                view.setViewAnimals(viewAnimals);
-                
-                adminDash.dispose();
-                
-                viewAnimals.setVisible(true);
-                viewAnimals.validate();
-                viewAnimals.repaint();
-            }
-
-        });
-    }
 
     private void addAnimalsButtonController() {
 
@@ -100,7 +83,26 @@ public class DashboardController implements WindowListener {
         });
     }
 
-    
+    private void viewAnimalsButtonController() {
+
+        adminDash.getViewAnimalButton().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                viewAnimals = new ViewAnimalsFrame(adminDash.getView().getAnimals(), "Voir animaux", 975, 600, "src/farm/view/images/animal.png");
+                
+                ctrl.getViewAnimalsCtrl().setViewAnimals(viewAnimals);
+                view.setViewAnimals(viewAnimals);
+                
+                adminDash.dispose();
+                
+                viewAnimals.setVisible(true);
+                viewAnimals.validate();
+                viewAnimals.repaint();
+            }
+
+        });
+    }
+
 
     @Override
     public void windowOpened(WindowEvent e) {
