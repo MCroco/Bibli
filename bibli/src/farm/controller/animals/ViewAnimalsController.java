@@ -119,7 +119,8 @@ public class ViewAnimalsController implements WindowListener {
 
     }
 
-    private class JButtonStateController implements DocumentListener {
+    @SuppressWarnings("unused")
+	private class JButtonStateController implements DocumentListener {
 
         JButton button;
 
@@ -186,7 +187,7 @@ public class ViewAnimalsController implements WindowListener {
                         setOffspringsTable();
 
                     } else {
-                        viewAnimals.getPlaceHolderImage().getImageLabel().setVisible(true);
+//                        viewAnimals.getPlaceHolderImage().getImageLabel().setVisible(true);
                     }
                 }
             }
@@ -213,7 +214,7 @@ public class ViewAnimalsController implements WindowListener {
     }
 
     protected void setAnimalCard(int en) {
-        viewAnimals.getPlaceHolderImage().getImageLabel().setVisible(false);
+//        viewAnimals.getPlaceHolderImage().getImageLabel().setVisible(false);
         viewAnimals.getAnimalView().setVisible(true);
         // Exhibit Number
         viewAnimals.getAnimalView().setExhibitNumber(Integer.toString(en));
@@ -342,7 +343,7 @@ public class ViewAnimalsController implements WindowListener {
 
     public String typeString() {
         StringBuilder strB = new StringBuilder();
-        for (Class t : viewAnimals.getAnimals().get(index).getClass().getInterfaces()) {
+        for (@SuppressWarnings("rawtypes") Class t : viewAnimals.getAnimals().get(index).getClass().getInterfaces()) {
             strB.append(t.getSimpleName() + " ");
         }
         return strB.toString();
@@ -397,7 +398,8 @@ public class ViewAnimalsController implements WindowListener {
     }
 
     public void extraFieldsValues() {
-        ArrayList<Boolean> list = new ArrayList<>();
+        @SuppressWarnings("unused")
+		ArrayList<Boolean> list = new ArrayList<>();
         String[] types = null;
         for (int i = 0; i < viewAnimals.getAnimals().get(index).getClass().getInterfaces().length; i++) {
             if (i == 0) {
