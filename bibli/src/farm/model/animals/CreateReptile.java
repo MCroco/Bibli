@@ -15,24 +15,45 @@ public class CreateReptile extends Animal implements Reptile  {
     
     private int isVennon; 
     
+    /**
+     * @param specie
+     * @param name
+     * @param dateOfBirth
+     * @param dateOfArrival
+     * @param gender
+     * @param medication
+     * @param vaccine
+     */
     public CreateReptile(String specie, String name, String dateOfBirth, String dateOfArrival, int gender, Medication medication, Vaccine vaccine) {
         super(specie, name, dateOfBirth, dateOfArrival, gender, medication, vaccine);
     
     }
 
+    /**
+     *
+     */
     @Override
     public void createOffpring(String name, String dateOfBirth, String dateOfArrival, int gender, Medication medication, Vaccine vaccine) {
         getOffsprings().add(new CreateReptile(this.getSpecie(), name, dateOfBirth, dateOfArrival, gender, medication, vaccine));
     }
 
+    /**
+     * @return
+     */
     public int getIsVennon() {
         return isVennon;
     }
 
+    /**
+     * @param isVennon
+     */
     public void setIsVennon(int isVennon) {
         this.isVennon = isVennon;
     }
     
+    /**
+     *
+     */
     @Override
     public ArrayList<String> toArrayList(){
         ArrayList<String> list = super.toArrayList();
@@ -40,6 +61,9 @@ public class CreateReptile extends Animal implements Reptile  {
         return list;
     }
     
+    /**
+     *
+     */
     @Override
     public ArrayList<String> nameVariables(){
         ArrayList<String> names = super.nameVariables();

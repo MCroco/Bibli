@@ -33,19 +33,19 @@ public class Vaccine implements Serializable {
         return vaccineName;
     }
 
-    public String toString(){
-        String var = "";
-        if (getVaccineName().size() != 0){
-            for (int i = 0 ; i < getVaccineName().size() ; i++){
-                if (i == getVaccineName().size() - 1){
-                    var += String.valueOf(getVaccineName().get(i));
-                }else{
-                    var += String.valueOf(getVaccineName().get(i))+", ";
-                }
-            }
-        }
-        return var;
-    }    
+//    public String toString(){
+//        String var = "";
+//        if (getVaccineName().size() != 0){
+//            for (int i = 0 ; i < getVaccineName().size() ; i++){
+//                if (i == getVaccineName().size() - 1){
+//                    var += String.valueOf(getVaccineName().get(i));
+//                }else{
+//                    var += String.valueOf(getVaccineName().get(i))+", ";
+//                }
+//            }
+//        }
+//        return var;
+//    }    
 
     public void addVaccine(ArrayList<String> vac) {
         for (String v : vac) {

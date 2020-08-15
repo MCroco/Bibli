@@ -1,7 +1,5 @@
 package farm.model.animals;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author MConstantin
@@ -9,10 +7,7 @@ import java.util.ArrayList;
 public interface Reptile {
     
     default String isVennon(int t) {
-        return t ==1 ? "Yes" : "No"; 
+        return t ==1 ? "Oui" : "Non"; 
     }
     
-    public ArrayList<String> toArrayList();
-     
-    public ArrayList<String> nameVariables();
 }

@@ -17,12 +17,18 @@ public class Medication implements Serializable {
     private final int serial; 
     private ArrayList<String> medicationName;
     
+    /**
+     * 
+     */
     public Medication() {
         serial = id; 
         id++;
         medicationName = new ArrayList<>();
     }
     
+    /**
+     * @param name
+     */
     public Medication(String name) {
         serial = id; 
         id++;
@@ -30,31 +36,43 @@ public class Medication implements Serializable {
         medicationName.add(name); 
     }
     
+    /**
+     * @param name
+     */
     public void addMedication(String name) {
         medicationName.add(name); 
     }
     
+    /**
+     * @param medication
+     */
     public void addMedication(ArrayList<String> medication) {
         for (String m : medication) {
             this.medicationName.add(m);
         }
     }
 
+    /**
+     * @return
+     */
     public ArrayList<String> getMedicationName() {
         return medicationName;
     }
     
-    public String toString(){
-        String var = "";
-        if (getMedicationName().size() != 0){
-            for (int i = 0 ; i < getMedicationName().size() ; i++){
-                if (i == getMedicationName().size() - 1){
-                    var += String.valueOf(getMedicationName().get(i));
-                }else{
-                    var += String.valueOf(getMedicationName().get(i))+", ";
-                }
-            }
-        }
-        return var;
-    }
+    /**
+     *
+     */
+//    public String toString(){
+//        String var = "";
+//        if (getMedicationName().size() != 0){
+//            for (int i = 0 ; i < getMedicationName().size() ; i++){
+//                if (i == getMedicationName().size() - 1){
+//                    var += String.valueOf(getMedicationName().get(i));
+//                }else{
+//                    var += String.valueOf(getMedicationName().get(i))+", ";
+//                }
+//            }
+//        }
+//        return var;
+//    }
 }

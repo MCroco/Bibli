@@ -14,7 +14,8 @@ import javax.swing.JPanel;
 import farm.view.generic.MainFrame;
 
 /**
- *
+ * Cette classe contient la totalité du code nécessaire pour créer la premiére fenêtre
+ * de l'application.
  * @author MConstantin
  */
 public class Dashboard extends MainFrame {
@@ -30,6 +31,14 @@ public class Dashboard extends MainFrame {
     private JLabel welcomeImage;
     private TheView view;
 
+
+    /**
+     * @param view
+     * @param title
+     * @param width
+     * @param height
+     * @param image
+     */
     public Dashboard(TheView view, String title, int width, int height, String image) {
         
         super(title, width, height, image);
@@ -65,16 +74,7 @@ public class Dashboard extends MainFrame {
         this.setAddAnimalButton();
         animalPanel.add(addAnimalButton);
         
-        // Update Animal button:
-        /*
-        this.setUpdateAnimalButton();
-        animalPanel.add(updateAnimalButton);
-        
-        // search animal button:
-        
-        this.setSearchAnimalButton();
-        animalPanel.add(searchAnimalButton);
-        */
+
         // View animal button:
         
         this.setViewAnimalButton();
@@ -87,6 +87,9 @@ public class Dashboard extends MainFrame {
     }
     
     
+    /**
+     * 
+     */
     private void setDashboardHeader() {
         header = new JPanel();
         header.setLayout(null);
@@ -94,12 +97,18 @@ public class Dashboard extends MainFrame {
         header.setBounds(MainFrame.xCoordinate(0), MainFrame.yCoordinate(0), MainFrame.xCoordinate(350), MainFrame.yCoordinate(60));
     }
     
+    /**
+     * 
+     */
     private void setWelcomeLabel() {
         welcomeLabel = new JLabel("Bienvenue M. Dessy!");
         welcomeLabel.setFont(new Font("Jazz LET", Font.PLAIN, MainFrame.xCoordinate(20)));
         welcomeLabel.setBounds(MainFrame.xCoordinate(100), MainFrame.yCoordinate(15), MainFrame.xCoordinate(300), MainFrame.yCoordinate(30));
     }
     
+    /**
+     * 
+     */
     private void setWelcomeImage() {
         welcomeImage = new JLabel();
         ImageIcon imgL = new ImageIcon(this.getClass().getResource("/images/header.png"));
@@ -117,6 +126,9 @@ public class Dashboard extends MainFrame {
     
     
    
+    /**
+     * 
+     */
     private void setAnimalPanel() {
         animalPanel = new JPanel(null);
         animalPanel.setLayout(null);
@@ -137,6 +149,9 @@ public class Dashboard extends MainFrame {
         animalPanel.add(animalImage);
     }
     
+    /**
+     * 
+     */
     private void setAddAnimalButton() {
         ImageIcon addAnimalIcon = new ImageIcon(this.getClass().getResource("/images/addanimal.png"));
         Image imgAddAnimal = addAnimalIcon.getImage();
@@ -150,10 +165,10 @@ public class Dashboard extends MainFrame {
         addAnimalButton.setBounds(MainFrame.xCoordinate(90), MainFrame.yCoordinate(20), MainFrame.xCoordinate(90), MainFrame.yCoordinate(30));
     }
 
+    /**
+     * 
+     */
     private void setLogOutButton() {
-        
-
-       
         logoutButton = new JButton("Deconnexion");
         logoutButton.setFont(new Font("PLAIN", Font.PLAIN, MainFrame.xCoordinate(18)));
         logoutButton.setActionCommand("exitButton");
@@ -161,12 +176,14 @@ public class Dashboard extends MainFrame {
         logoutButton.setMargin(new Insets(0,0,0,0));
         logoutButton.setBounds(MainFrame.xCoordinate(335), MainFrame.yCoordinate(15), MainFrame.xCoordinate(85), MainFrame.yCoordinate(30));
     }
+    /**
+     * 
+     */
     private void setViewAnimalButton() {
         ImageIcon viewAnimalIcon = new ImageIcon(this.getClass().getResource("/images/viewanimals.png"));
         Image imgViewAnimal = viewAnimalIcon.getImage();
         Image newImgViewAnimal = imgViewAnimal.getScaledInstance(MainFrame.xCoordinate(24), MainFrame.yCoordinate(24), Image.SCALE_SMOOTH);
         ImageIcon newViewAnimalIcon = new ImageIcon(newImgViewAnimal);
-        
         viewAnimalButton = new JButton("Voir animaux", newViewAnimalIcon);
         viewAnimalButton.setFont(new Font("BOLD", Font.BOLD, MainFrame.xCoordinate(12)));
         viewAnimalButton.setToolTipText("Voir tous les animaux");
@@ -175,26 +192,44 @@ public class Dashboard extends MainFrame {
     }
 
   
+    /**
+     * @return
+     */
     public JButton getAddAnimalButton() {
         return addAnimalButton;
     }
 
+    /**
+     * @return
+     */
     public JButton getUpdateAnimalButton() {
         return updateAnimalButton;
     }
 
+    /**
+     * @return
+     */
     public JButton getSearchAnimalButton() {
         return searchAnimalButton;
     }
 
+    /**
+     * @return
+     */
     public JButton getViewAnimalButton() {
         return viewAnimalButton;
     }
 
+    /**
+     * @return
+     */
     public JButton getLogoutButton() {
         return logoutButton;
     }
 
+    /**
+     * @return
+     */
     public TheView getView() {
         return view;
     }

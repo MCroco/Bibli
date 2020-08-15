@@ -29,6 +29,9 @@ public class TheView {
     ArrayList<Animal> animals;
 
 
+    /**
+     * @param model
+     */
     public TheView(TheModel model) {
 
         this.animals = model.getListAnimals();
@@ -38,40 +41,67 @@ public class TheView {
 
     }
 
+    /**
+     * @param addAnimal
+     */
     public void setAddAnimal(AddAnimalFrame addAnimal) {
         this.addAnimal = addAnimal;
     }
 
 
 
+    /**
+     * @return
+     */
     public AddAnimalFrame getAddAnimal() {
         return addAnimal;
     }
 
+    /**
+     * @return
+     */
     public ViewAnimalsFrame getViewAnimals() {
         return viewAnimals;
     }
 
+    /**
+     * @param viewAnimals
+     */
     public void setViewAnimals(ViewAnimalsFrame viewAnimals) {
         this.viewAnimals = viewAnimals;
     }
 
+    /**
+     * @param updateAnimal
+     */
     public void setUpdateAnimal(UpdateAnimalFrame updateAnimal) {
         this.updateAnimal = updateAnimal;
     }
 
+    /**
+     * @return
+     */
     public UpdateAnimalFrame getUpdateAnimal() {
         return updateAnimal;
     }
 
+    /**
+     * @return
+     */
     public Dashboard getAdminDash() {
         return adminDash;
     }
 
+    /**
+     * @return
+     */
     public ArrayList<Animal> getAnimals() {
         return animals;
     }
 
+    /**
+     * @param adminDash
+     */
     public void setAdminDash(Dashboard adminDash) {
         this.adminDash = adminDash;
     }

@@ -1,6 +1,5 @@
 package farm.model.animals;
 
-import java.util.ArrayList;
 
 /**
  *
@@ -9,11 +8,12 @@ import java.util.ArrayList;
 public interface Mammal {
  
     
+    /**
+     * @param t
+     * @return
+     */
     default String hasFur(int t) {
-        return t == 1 ? "Yes" : "No"; 
+        return t == 1 ? "Oui" : "Non"; 
     }
-    
-    public ArrayList<String> toArrayList();
-    
-    public ArrayList<String> nameVariables();
+
 }
